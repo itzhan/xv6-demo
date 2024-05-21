@@ -193,6 +193,14 @@ UPROGS=\
 	$U/_grind\
 	$U/_wc\
 	$U/_zombie\
+	$U/_pingpang\
+
+_pingpang: pingpang.c
+    $(CC) $(CFLAGS) -o _pingpang pingpang.c $(ULIB) $(USYS)
+    $(OBJDUMP) -S _pingpang > pingpang.asm
+
+
+	
 
 
 
